@@ -1,0 +1,358 @@
+
+
+.main{
+    flex: 1;
+    min-height: 100vh;
+    padding-bottom: 15vh;
+    
+    
+    background-size: cover;
+    background-position: center;
+    background: rgb(253, 250, 255);
+background: linear-gradient(120deg, #a1c4fd 0%,#c2e9fb 100%, rgba(0,212,255,1) 100%);
+    
+}
+
+.bg {
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+}
+ 
+.bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+}
+ 
+.bg3 {
+    animation-duration:5s;
+}
+
+@keyframes slide {
+    0% {
+        transform:translateX(-25%);
+    }
+ 
+    100% {
+        transform:translateX(25%);
+    }
+}
+.main .nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 22px;
+    padding: 20px;
+    color: gray;
+}
+
+.main-container{
+    max-width: 900px;
+    margin: auto;
+}
+
+.main .greet{
+    margin: 50px 0px;
+    padding: 50px;
+    font-size: 56px;
+    color: rgb(0, 255, 8);
+    text-shadow: 5px 0px 0px black;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    border: 5px solid black;
+    box-shadow: 10px 10px 5.6px black;
+    background-color: blueviolet;
+}
+
+.main .greet span{
+    background-color: rgb(0, 115, 123);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 5px 0px 0px rgb(228, 255, 55);
+    
+}
+
+.main .cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px,2fr));
+    gap: 55px;
+    padding: 20px;
+   
+}
+
+.main .card{
+    padding: 15px;
+    background-color: lightgrey;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    z-index: 10;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    font-weight: 800;
+    
+    text-shadow: 5px 0px 0px black;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    border: 5px solid black;
+    background: transparent;
+    transition: 0.2s;
+    box-shadow: 5px 5px 0px black;
+}
+
+.main .card-icons{
+    width: 35px;
+    padding: 4px;
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    
+}
+
+.main .card p{
+    font-size: 17px;
+    
+    
+}
+
+.main .card:hover{
+    /* background-color: rgb(160, 162, 162); */
+    transform: scale(1.1);
+    transition: 0.2s ease-in;
+    box-shadow: none;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+#indian{
+    /* background: url(../../../images/indianFood.webp) no-repeat; */
+    background-size: cover;
+    background-position: center;
+    
+    color: yellow;
+}
+
+
+#chinease{
+    /* background: url(../../../images/chineaseFood.webp) no-repeat; */
+    background-size: cover;
+    background-position:center;
+    color: red;
+}
+
+#mexican{
+    /* background: url(../../../images/mexican.jpg); */
+    background-size: cover;
+    background-position: center;
+    color: rgb(255, 149, 0);
+}
+.main-bottom{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    max-width: 900px;
+    padding: 30px 20px;
+    margin: auto;
+    z-index: 100;
+}
+
+.search-box{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border-radius: 14px;
+    
+
+}
+
+.search-box .input-icons{
+    
+    cursor: pointer;
+}
+
+.search-box input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 8px;
+    font-size: 18px;
+}
+
+.search-box div{
+    display: flex;
+    align-items: center;
+    gap: 19px;
+}
+
+.main .bottom-info{
+    font-size: 15px;
+    margin: 15px auto;
+    text-align: center;
+    font-weight: 300;
+}
+
+.result{
+    padding: 0px 5%;
+    max-height: 70vh;
+    overflow-y: scroll;
+    background: transparent;
+    
+}
+
+.result::-webkit-scrollbar{
+    display: none;
+}
+
+.result-title{
+    margin: 40px 0px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: rgb(4, 236, 213);
+    height: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    font-size: 19px;
+    font-weight: 500;
+    border: 2px solid rgb(25, 209, 255);
+}
+
+.result-data{
+    
+    background-color: rgb(232, 232, 232);
+    padding: 30px;
+    border-radius: 7px;
+    gap: 20px;
+    border: 2px solid black;
+    background: transparent;
+    backdrop-filter: blur(50px);
+    
+    font-size: 26px;
+    letter-spacing: 1px;
+    font-weight: 900;
+    background-color: rgb(213, 235, 255);
+}
+
+
+.loader{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+.loader hr{
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(92, 241, 255);
+    background: linear-gradient(to right,rgb(36, 167, 190),rgb(202, 230, 222),rgb(35, 167, 190));
+    background-size: 800px 50px;
+    height: 20px;
+    animation: loader 2s infinite ease-in;
+
+}
+
+
+.filter-buttons{
+    width: 5rem;
+    height: 2.5rem;
+    /* transition: 0.2s; */
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.v-yes{
+    background-color: rgb(52, 160, 46);
+    background: url(../../../public/images/brocolli.png) no-repeat;
+    background-size: 100%;
+    background-position: center;
+    transition: 0.2s;
+    color: rgb(0, 0, 0);
+    
+}
+
+.v-no{
+    
+    background-color: rgb(255, 255, 255);
+}
+
+.min-no{
+    background-color: rgb(255, 255, 255);
+}
+
+.min-yes{
+    /* background-color: rgb(135, 215, 242); */
+    background: url(../../../public/images/clock3.webp) no-repeat;
+    transition: 0.2s;
+    background-size:cover;
+    background-position:center;
+    /* color: white; */
+}
+
+.hel-yes{
+    background: url(../../../public/images/healthy.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: 0.2s;
+}
+.dish-filter{
+    display: flex;
+    width: 20rem;
+    justify-content: space-between;
+}
+@keyframes loader {
+    0%{
+        background-position: -800px 0px;
+    }
+    100%{
+        background-position: 800% 0px;
+    }
+}
+.result-data p{
+    font-size: 17px;
+    font-weight:400;
+    line-height: 1.8;
+}
+
+@media (max-width:600px){
+    .main-bottom input{
+        flex: none;
+        width: 90%;
+        /* margin-top: px; */
+    }
+
+    .input-icons{
+        width: 20px;
+    }
+    .search-box{
+        padding: 5px 10px;
+    }
+
+    .search-box div{
+        gap: 5px;
+    }
+
+    .card{
+        font-size:medium ;
+    }
+}
